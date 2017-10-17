@@ -1,4 +1,4 @@
-# Jest utilities for Linaria
+# Jest utilities for [Linaria](https://github.com/callstack/linaria)
 
 A set of utilities for more delightful testing of Linaria–enhanced code with Jest.
 
