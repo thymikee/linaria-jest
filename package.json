@@ -2,6 +2,7 @@
   "name": "jest-serializer-linaria",
   "scripts": {
     "test": "jest",
+    "lint": "eslint . --cache",
     "postinstall": "yarn link linaria"
   },
   "dependencies": {
