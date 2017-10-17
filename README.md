@@ -11,16 +11,44 @@ A set of utilities for more delightful testing of Linaria–enhanced code with J
 One of the most helpful utilities for CSS in JS libraries are [snapshot serialiers](http://facebook.github.io/jest/docs/en/expect.html#expectaddsnapshotserializerserializer), which are able to colocate styles with JS code. Linaria provides serializers for React and Preact components by default.
 
 ### Usage
+
 Use it directly in your test file, or in `setupFiles`:
+
 ```js
 import { reactSerializer } from 'linaria/jest';
 
 expect.addSnapshotSerializer(reactSerializer);
 ```
 
+Make sure you **turn off** `linaria/babel` preset for testing purposes, otherwise it won't work.
+E.g. test this:
+
+```json
+{
+  "presets": ["env", "react", "linaria/babel"],
+}
+```
+
+...to this:
+
+```json
+{
+  "presets": ["env", "react"],
+  "env": {
+    "development": {
+      "presets": ["linaria/babel"]
+    },
+    "production": {
+      "presets": ["linaria/babel"]
+    }
+  }
+}
+```
+
 ### Example
 
 Here's a component we want to snapshot:
+
 ```jsx
 import React from 'react';
 import { css, names } from 'linaria';
@@ -38,7 +66,9 @@ const container = css`
   }
 `;
 ```
+
 We write a test (provided that our serializer is added in `setupFiles`):
+
 ```jsx
 import React from 'react';
 import { css } from 'linaria';
@@ -53,6 +83,7 @@ test('my pretty Container', () => {
 ```
 
 ...and the output snapshot with serializer applied is:
+
 ```js
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
