@@ -15,7 +15,7 @@ One of the most helpful utilities for CSS in JS libraries are [snapshot serialie
 Use it directly in your test file, or in `setupFiles`:
 
 ```js
-import { reactSerializer } from 'linaria/jest';
+import { reactSerializer } from 'linaria-jest';
 
 expect.addSnapshotSerializer(reactSerializer);
 ```
