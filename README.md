@@ -21,7 +21,7 @@ expect.addSnapshotSerializer(reactSerializer);
 ```
 
 Make sure you **turn off** `linaria/babel` preset for testing purposes, otherwise it won't work.
-E.g. test this:
+E.g. change this:
 
 ```json
 {
