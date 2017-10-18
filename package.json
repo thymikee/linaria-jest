@@ -1,6 +1,10 @@
 {
   "name": "linaria-jest",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "Jest utilities for Linaria",
+  "author": "Michał Pierzchała <thymikee@gmail.com>",
+  "repository": "github:thymikee/linaria-jest",
+  "license": "MIT",
   "scripts": {
     "test": "jest",
     "lint": "eslint . --cache",
