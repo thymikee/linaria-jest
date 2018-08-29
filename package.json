@@ -7,12 +7,11 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "lint": "eslint . --cache",
-    "postinstall": "yarn link linaria"
+    "lint": "eslint . --cache"
   },
   "dependencies": {
     "babel-preset-env": "^1.6.0",
-    "linaria": "^0.1.4",
+    "linaria": "^0.5.0",
     "prettier": "^1.7.4"
   },
   "devDependencies": {
